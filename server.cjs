@@ -19,6 +19,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("game-state", (roomId, state) => {
+    console.log(roomId, state)
     socket.to(roomId).emit("opponent-state", state);
   });
 
