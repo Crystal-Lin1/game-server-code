@@ -1,0 +1,1 @@
+This is the server code for https://github.com/staten-island-tech/vue-supabase-project-cool-game-team, connected to Railway to create a remote server.  
