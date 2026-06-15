@@ -27,6 +27,7 @@ socket.on('player-lost', (roomId, timeSurvived) => {
 })
 
   socket.on("move-fruit", (roomId, data) => {
+    console.log(data)
     socket.to(roomId).emit("opponent-move-fruit", data);
   });
 });
