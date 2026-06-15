@@ -22,6 +22,9 @@ io.on("connection", (socket) => {
     console.log(roomId, state)
     socket.to(roomId).emit("opponent-state", state);
   });
+socket.on('player-lost', (roomId, timeSurvived) => {
+  socket.to(roomId).emit('opponent-lost', timeSurvived) 
+})
 
   socket.on("move-fruit", (roomId, data) => {
     socket.to(roomId).emit("opponent-move-fruit", data);
